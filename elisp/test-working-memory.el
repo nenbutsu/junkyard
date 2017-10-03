@@ -1,0 +1,59 @@
+;;; test-working-memory.el --- skeletal emacs lisp library file
+
+;; Copyright (C) 2000 Yuji 'bmonkey' Minejima <ggb01164@nifty.ne.jp>
+
+;; Author: Yuji Minejima <ggb01164@nifty.ne.jp>
+;; $Revision: 1.1 $
+;; Keywords: local
+
+;; This file is NOT part of GNU Emacs.
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 2, or (at your option)
+;; any later version.
+
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs; see the file COPYING.  If not, write to the
+;; Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+;; Boston, MA 02111-1307, USA.
+
+;;; Commentary:
+
+
+;;; Code:
+
+
+(defun test-working-memory ()
+  (interactive)
+  (random t)
+  (let ((len 1)
+        (seq nil)
+	(continue t)
+        answer)
+    (while continue
+      (let ((i 0))
+        (setq seq nil)
+        (while (< i len)
+          (setq seq (append seq (list (random 99))))
+          (message (prin1-to-string seq))
+          (sleep-for 0.5)
+          (setq i (1+ i)))
+        (setq answer (read-minibuffer "Answer = "))
+        (when (not (consp answer))
+          (setq answer (list answer)))
+        (if (equal (mapcar #'1+ seq) answer)
+            (setq len (1+ len))
+          (setq continue nil))))))
+
+
+
+
+(provide 'test-working-memory)
+
+;;; test-working-memory.el ends here

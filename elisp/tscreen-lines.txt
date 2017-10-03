@@ -1,0 +1,254 @@
+aaaAAA
+BBBbbb
+
+(set-text-properties 4 11 '(invisible t))
+(next-overlay-change 1)
+
+oooooooooooooooooooooooooooooooooooXXXXX
+XXXooooooooooooo
+
+(set-text-properties 36 45 '(intangible t))
+
+abc
+DEF
+GHI
+JKl
+(set-text-properties 5 14 '(intangible t))
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+(set-text-properties 70 500 '(intangible t))
+
+(global-set-key [f4]
+                #'(lambda () (interactive) (message "%s" (current-column))))
+
+(global-set-key [f4]
+                #'(lambda () (interactive) (message "%s" (point))))
+
+(global-set-key [f4]
+                #'(lambda () (interactive)
+                    (message "%s" (line-end-position))))
+
+(global-set-key [f3]
+                #'(lambda () (interactive)
+                    (message "%s" (screen-lines-current-column))))
+
+(global-set-key [f4] #'(lambda () (interactive)
+                         (message "%s" (forward-line -10))))
+
+(global-set-key [f4] #'(lambda () (interactive)
+                         (message "%s" (screen-lines-forward-line -10))))
+
+(global-set-key [f4] #'(lambda () (interactive)
+                         (message "%s" (vertical-motion 1))))
+
+(global-set-key [f4] #'(lambda () (interactive) (message "%s" (eolp))))
+
+
+(global-set-key "\C-n" 'next-line)
+
+(global-set-key "\C-n" 'screen-lines-next-line)
+(global-set-key "\C-p" 'screen-lines-previous-line)
+(global-set-key "\C-a" 'screen-lines-beginning-of-line)
+(global-set-key "\C-e" 'screen-lines-end-of-line)
+
+
+
+(setq track-eol t)
+(setq goal-column nil)
+(setq next-line-add-newlines nil)
+(setq truncate-lines t)
+
+aaaa
+bbbb
+(set-text-properties 1 7 '(intangible t))
+
+
+
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccccccc
+dddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+
+
+
+;; `Intangible' text property          see "(elisp)Special Properties"
+;;
+;;     12345678901234567890123456789012345678901 point
+;;     01234567890123456789012345678901234567890 column
+;;    |aaaXXX<RET>
+;;    |XXXbbb
+;;
+;; (set-text-properties 4 11 '(intangible t))
+;; (progn (goto-char 0)
+;;        (end-of-line))
+;;
+;; => |aaaXXX<RET>
+;;    |XXX-!-bbb
+;;
+;; (backward-char)
+;;
+;; => |aaa-!-XXX<RET>
+;;    |XXXbbb
+;;
+;;
+
+;;     12345678901234567890123456789012345678901 point
+;;     01234567890123456789012345678901234567890 column
+;;    |abc<RET>
+;;    |DEF<RET>
+;;    |GHI<RET>
+;;    |Jkl<RET>
+;;
+;; (set-text-properties 5 14 '(intangible t))
+;; (progn (goto-char 0)
+;;        (forward-line 2))
+;; 
+;; => |abc<RET>
+;;    |DEF<RET>
+;;    |GHI<RET>
+;;    |J-!-kl<RET>
+;;
+;; (progn (goto-char 0)
+;;        (vertical-motion 2)) => the same as (forward-line 2)
+;;
+
+
+;; `Invisible' text property               see "(elisp)Invisible Text"
+;;
+;;  end-of-line           sees invisible text.
+;;  beginning-of-line     sees invisible text.
+;;  forward-line          sees invisible text.
+;;  current-column        returns the value of the last visible text
+;;
+;;     12345678901234567890123456789012345678901 point
+;;     01234567890123456789012345678901234567890 column
+;;    |aaaAAA<RET>
+;;    |BBBbbb<RET>                        
+;;
+;; (set-text-properties 4 11 '(invisible t))
+;; 
+;; => |aaabbb<RET>
+;;
+
+;;     12345678901234567890123456789012345678901 point
+;;     01234567890123456789012345678901234567890 column
+;;    |a<RET>
+;;    |B<RET>
+;;    |c<RET>
+;;
+;; (add-to-invisibility-spec '(vanish . t))
+;; (set-text-properties 3 4  '(invisible vanish))
+;; 
+;; => |a<RET>
+;;    |...<RET>
+;;    |c<RET>
+;;
+;; (set-text-properties 3 5 '(invisible vanish))
+;;
+;; => |a<RET>
+;;    |c<RET>
+;;
+
+;;     12345678901234567890123456789012345678901 point
+;;     01234567890123456789012345678901234567890 column
+;;    |a<RET>
+;;    |b<RET>
+;;    |c<RET>
+;; 
+;; (add-to-invisibility-spec '(vanish . t))
+;; (set-text-properties 2 5  '(invisible vanish))
+;;
+;; => |ac<RET>
+;;
+;; (progn (goto-char (point-min))
+;;        (vertical-motion 1))
+;;
+;; => |ac<RET>
+;;    |-!-
+;;
+;; (progn (goto-char (point-min))
+;;        (forward-line 3))
+;;
+;; => |ac<RET>
+;;    |-!-
+;;
+
+
+
+
+;;; Local Variables: ***
+;;; mode:emacs-lisp ***
+;;; End: ***
