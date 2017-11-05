@@ -36,26 +36,10 @@
 ;;(set-keyboard-coding-system 'utf-8)
 ;;(global-set-key [kanji] 'toggle-input-method)
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp"))
+(add-to-list 'load-path (expand-file-name "~/junkyard/elisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/mcomplete"))
 (add-to-list 'load-path (expand-file-name "~/islelisp"))
 
-
-;; 固定等幅フォント
-(set-face-attribute 'fixed-pitch    nil :family "ＭＳ ゴシック")
-;; 可変幅フォント
-(set-face-attribute 'variable-pitch nil :family "ＭＳ ゴシック")
-
-(add-to-list 'default-frame-alist '(font . "ＭＳ ゴシック-12"))
-
-(set-face-font 'font-lock-comment-face       "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-string-face        "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-keyword-face       "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-builtin-face       "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-function-name-face "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-variable-name-face "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-type-face          "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-constant-face      "ＭＳ ゴシック-12")
-(set-face-font 'font-lock-warning-face       "ＭＳ ゴシック-12")
 
 (setq-default line-spacing 2)
 
@@ -69,7 +53,7 @@
                ;;'(mouse-color . "white")
                ;;'(cursor-color . "black")
                '(width . 100)
-               '(height . 60)
+               '(height . 65)
                '(top . 0)
                '(left . 500)
                )
@@ -143,7 +127,6 @@
 (require 'mcomplete)
 (turn-on-mcomplete-mode)
 (put 'bookmark-jump 'mcomplete-mode '(:exhibit-start-chars 0))
-(put 'sgml-insert-element 'mcomplete-mode '(:exhibit-start-chars 0))
 
 (require 'completing-help)
 (turn-on-completing-help-mode)
@@ -172,20 +155,22 @@
 ;; hyperspec
 (eval-after-load "hyperspec" '(load "hyperspec-addon"))
 (require 'hyperspec)
-(setq common-lisp-hyperspec-root "file:///C:/Program%20Files%20%28x86%29/LispWorks/lib/6-1-0-0/manual/online/CLHS/")
+;;(setq common-lisp-hyperspec-root "file:///C:/Program%20Files%20%28x86%29/LispWorks/lib/6-1-0-0/manual/online/CLHS/")
 (require 'hyperdraft)
 
 (setq browse-url-browser-function 'browse-url-firefox)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(mcomplete-prefix-method-alternative-part-face ((t (:foreground "dark slate gray"))))
- '(mcomplete-prefix-method-fixed-part-face ((t (:foreground "dark slate gray" :weight bold))))
- '(mcomplete-substr-method-alternative-part-face ((t (:foreground "forest green"))))
- '(mcomplete-substr-method-fixed-part-face ((t (:foreground "forest green" :weight bold)))))
+(load (expand-file-name "~/.roswell/helper.el"))
+
+;;;(custom-set-faces
+;;; ;; custom-set-faces was added by Custom.
+;;; ;; If you edit it by hand, you could mess it up, so be careful.
+;;; ;; Your init file should contain only one such instance.
+;;; ;; If there is more than one, they won't work right.
+;;; '(mcomplete-prefix-method-alternative-part-face ((t (:foreground "dark slate gray"))))
+;;; '(mcomplete-prefix-method-fixed-part-face ((t (:foreground "dark slate gray" :weight bold))))
+;;; '(mcomplete-substr-method-alternative-part-face ((t (:foreground "forest green"))))
+;;; '(mcomplete-substr-method-fixed-part-face ((t (:foreground "forest green" :weight bold)))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
